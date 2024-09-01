@@ -28,3 +28,8 @@ Find the wireframes and the following files in this repository. This is a mockup
 
 [Wave Background Pattern](https://projects.verou.me/css3patterns/#wave)
 [Cross Background Pattern](https://css-pattern.com/tiny-squares/)
+
+[Sushi Background 1](https://unsplash.com/photos/colourful-sushi-on-background-with-copyspace-lgPGrO6Gfw0)
+[Sushi Background 2 ](https://unsplash.com/photos/background-pattern-KoS5bSlwSpU)
+
+[Wireframes: Excalidraw](https://excalidraw.com/)
