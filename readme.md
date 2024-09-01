@@ -1,15 +1,22 @@
-## Sushi4Me WireFraming and MockUp (Per Scholas 307)
+# WireFraming w/ MockUp (Per Scholas 307) (Sushi4Me)
 
 Find the wireframes and the following files in this repository. This is a mockup.  
-Live Demo here 
+[Live Demo here ](https://jordles.github.io/Per-Scholas-Assignment-Wireframe-307/)
 
-# Future Improvements
+![](https://raw.githubusercontent.com/jordles/Per-Scholas-Assignment-Wireframe-307/main/wireframe-landing-page.svg)
+![](https://raw.githubusercontent.com/jordles/Per-Scholas-Assignment-Wireframe-307/main/wireframe-login-signup.svg)
+![](https://raw.githubusercontent.com/jordles/Per-Scholas-Assignment-Wireframe-307/main/images/landing.png)
+![](https://raw.githubusercontent.com/jordles/Per-Scholas-Assignment-Wireframe-307/main/images/signup.png)
+
+## Future Improvements
 
 * Mobile-Friendly  
 * Animations / Dynamic / Fluidity
 
 
-# Attribution 
+
+
+## Attribution 
 
 [California Roll](https://www.konscious.com/products/california-roll)  
 [Rainbow Roll](https://www.konscious.com/products/rainbow-roll)  
