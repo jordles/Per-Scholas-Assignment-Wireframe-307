@@ -1,0 +1,367 @@
+*{
+  box-sizing: border-box;
+  font-family: "Yuji Syuku", serif;
+  font-weight: bold;
+  text-align:center;
+}
+:root{
+  --s: 30px; /* control the size*/
+  --c1: #faecea;
+  --c2: #efbcc5;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body{
+}
+nav{
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid black;
+  background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+  radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+  radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
+  background-size: 40px 80px;
+  background-repeat: repeat-x;
+}
+nav > button{
+  font-size: 3em;
+  border: none;
+}
+
+nav > button:hover{
+  color: green;
+}
+.logo{
+  /* border-top: 5px double black;
+  border-bottom: 5px dotted black; */
+  outline: 5px dotted rgb(235, 135, 181);
+  background: rgb(235, 135, 181);
+  border-radius: 15px;
+  width: fit-content;
+  padding: 0 10px;
+  padding-right: 20px;  
+  font-size: 3em;
+}
+.logo-text{
+  position: relative;
+  filter: drop-shadow(2px 2px 0 gray)
+}
+.logo-text span{
+  filter: drop-shadow(2px 2px 0 yellow)
+  drop-shadow(-2px 2px 0 red)
+  drop-shadow(2px -2px 0 red)
+  drop-shadow(-2px -2px 0 yellow);  
+  width: 1.2em;
+  position: absolute;
+  right: -35px;  
+  z-index: -1;
+}
+
+#user-options > span{
+  font-size: 3em;
+  vertical-align: middle;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             #HEADING / TAGLINE                             */
+/* -------------------------------------------------------------------------- */
+
+section{
+  height: 800px;
+}
+section:not(:first-child){
+  margin-bottom: 20px;
+}
+#tagline{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  overflow: hidden;
+}
+#tagline > *{
+  
+}
+#tagline::before{
+  content:"";
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url('https://plus.unsplash.com/premium_photo-1661627606440-a901eb9588c5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-position:initial;
+  background-repeat: no-repeat;
+  background-size:cover;
+  filter:blur(3px) /* brightness(1.2) */;
+}
+
+#tagline-text{
+  /* filter: drop-shadow(0 0 5px white); */
+  /* text-shadow: 0 0 10px white; */
+  text-shadow: 2px 2px 2px white,
+  -2px 2px 2px white,
+  2px -2px 2px white,
+  -2px -2px 2px white;
+  
+  padding: 10%;
+  margin: auto;
+}
+
+#tagline-text h1{
+  font-size: 5em;
+}
+
+#tagline-text h2{
+  font-size: 2em;
+}
+#tagline-picture{
+  height: inherit;
+  margin: auto;
+}
+
+#tagline-picture img{
+  filter: drop-shadow(10px 10px 5px rgb(0 0 0 / 10%))
+  drop-shadow(-10px 10px 5px rgb(0 0 0 / 10%))
+  drop-shadow(10px -10px 5px rgb(0 0 0 / 10%))
+  drop-shadow(-10px -10px 5px rgb(0 0 0 / 10%)); 
+  object-position: center;
+  object-fit:scale-down;
+  height: inherit;
+  width: 100%;
+  display: none;
+}
+
+#tagline-picture img.active{
+  display: block;
+}
+
+#tagline-picture img:last-of-type{
+  /* transform: scale(1.3) translateZ(0); */
+  zoom: 120%;
+}
+#dots{
+  grid-column: span 2;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dot{
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+}
+
+.dot.active{
+  background: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   EVENTS                                   */
+/* -------------------------------------------------------------------------- */
+#events{
+  background:
+    conic-gradient(at 60% 60%,var(--c1) 75%,#0000 0)
+    0 0/calc(5*var(--s)/2) calc(5*var(--s)/2),
+    repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%)
+    0 0/calc(5*var(--s)) calc(5*var(--s)),
+    repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%)
+    0 0/var(--s) var(--s); 
+  
+  position: relative;
+}
+
+#event1 > *{
+  margin: auto;
+}
+#event1 > img{
+  height: 300px;
+  position: absolute;
+}
+#event1 > img:first-of-type{
+  left: 0;
+  top:0;
+  transform:scaleX(-1);
+}
+#event1 > img:last-of-type{
+  right:0;
+  top:0;
+  
+}
+#event1{
+  padding: 50px;
+}
+
+#event1 > h1{
+  background: #EFBCC5;
+  margin: auto;
+  width: fit-content;
+  padding: 15px 40px;
+  border-radius: 15px;
+  outline: 2px dotted #EFBCC5;
+  margin-top: 35px;
+}
+#event1 h1:first-of-type{
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(248,253,45,1) 51%, rgba(255,255,255,0) 100%);
+  background-color: #faecea;
+  z-index: 105;
+}
+#event1 .saki-wrapper{
+  background: #8BACE6;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  position: relative;
+}
+
+#event1 .saki-wrapper div{
+  
+  position: absolute;
+  right: -150px;
+  top: 30px;
+  font-size: 3em;
+}
+#event1 .saki-wrapper span{
+  text-shadow: 3px 3px 0 #EFBCC5;
+}
+#event1 .saki-wrapper img{
+  height: 400px;
+  position: relative;
+  top: -30px;
+}
+
+#events button{
+  background: rgb(212, 170, 114);
+  border: none;
+  padding: 20px 50px;
+  font-size: 2em;
+  border-radius: 15px;
+  box-shadow: 0 0 10px 0px rgb(48, 35, 23);
+}
+
+#deals{
+  position: relative;
+}
+#events #deals svg{
+  position: absolute;
+  left: 0;
+  z-index: 100;
+}
+
+#deals > h1{
+  position: absolute;
+  z-index: 101;
+  top: 95px;
+  left: 35px;
+  padding: 100px;
+}
+
+#deals > h1:hover{
+  color: gold;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   REVIEWS                                  */
+/* -------------------------------------------------------------------------- */
+
+#reviews{
+  background: url('https://plus.unsplash.com/premium_photo-1670333242712-6e95c863592b?q=80&w=1413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px;
+}
+#reviews h2{
+  font-size: 3em;
+}
+#reviews .wrapper{
+  width: 100%;
+  height: 100%;
+}
+#reviews .review-wrapper{
+  background: rgb(255 255 255 / 0.5);
+  height: 500px;
+  width: 100%;
+  border-radius: 15px;
+  backdrop-filter: blur(2px);
+  padding: 10px 50px;
+  overflow: auto;
+}
+
+#reviews .review-wrapper p{
+  font-size: 2em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    FORM                                    */
+/* -------------------------------------------------------------------------- */
+#signup{
+  width: 400px;
+  height: 600px;
+  padding: 40px;
+  z-index: 104;
+  position: fixed;
+  background: rgb(255 255 255 / 50%);
+  backdrop-filter: blur(5px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: none;
+}
+#signup.active{
+  display: block;
+}
+#signup > span{
+  color: red;
+  font-size: 2em;
+  position: absolute;
+  right: 15px;
+  top:5px;
+}
+
+#signup form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+#signup .logo{
+  margin: auto;
+}
+#signup .logo-text{
+  font-size: 0.5em;
+}
+/* #signup h1{
+  padding: 0;
+  margin: 0;
+} */
+#signup input{
+  background: white;
+  border-radius: 5px;
+  font-size: 2em;
+}
+
+#signup input[type="submit"]{
+  margin-top: 10px;
+  background: rgb(235, 135, 181);
+  padding: 15px 10px;
+}
